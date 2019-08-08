@@ -76,10 +76,12 @@ header > .container {
 .service,
 .team,
 .insights,
-.design,
 footer {
 	padding-top: 80px;
 	padding-bottom: 150px;
+}
+.design {
+	padding-top: 80px;
 }
 .logo {
 	display: inline;
