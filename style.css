@@ -55,7 +55,7 @@ li > a:hover {
 .menuToggle {
 	display: inline;
 	position: absolute;
-	top: 50px;
+	top: 40px;
 	right: 30px;
 	border: none;
 	font-weight: bold;
