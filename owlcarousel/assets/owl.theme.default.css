@@ -86,17 +86,11 @@
 	.owl-next {
 		top: 110%;
 		margin: 0;
-		left: 50%;
+	}
+.owl-next {
+	left: 50%;
 	}
 .owl-prev {
-left: 40%;
-}
-@media (max-width: 768px) {
-	.owl-next {
-		left: 55%;
+left: calc(50% - 70px);
 	}
-.owl-prev {
-left: 35%;
-}
-}
 }
