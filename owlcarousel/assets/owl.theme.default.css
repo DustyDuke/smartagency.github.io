@@ -78,6 +78,7 @@
 	width: 35px;
 	margin: 5px;
 }
+}
 @media (max-width: 992px) {
 		.owl-dots {
 		display: none;
