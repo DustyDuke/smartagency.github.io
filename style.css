@@ -150,6 +150,9 @@ button:active {
 .feedback h3 {
 	text-align: center;
 }
+.fa-arrow-right {
+	margin-left: 5px;
+}
 .form-btn {
 	color: #fff;
 	background-color: #ff5c36;
