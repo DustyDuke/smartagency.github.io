@@ -1,7 +1,9 @@
 $('.menuToggle').click(function() {
 	$('.menu').toggle(400);
 });
-
+$('.form-btn').click(function() {
+	$('.fa-arrow-right').css({'transform': 'translateX(50px)', 'transition':'1s'});
+});
 
 $('.owl-carousel').owlCarousel({
     loop:true,
