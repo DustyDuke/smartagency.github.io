@@ -309,23 +309,28 @@ border: 1px solid #d3d3d3;
 	 text-align: left;
 	 padding-left: 30px;
 }
+
 .social:last-child {
 	-webkit-box-align: center;
 	-webkit-align-items: center;
 	-ms-flex-align: center;
 	 align-items: center;
 }
+.social i {
+	background-color: #d3d3d3;
+	border: 1px solid #d3d3d3;
+	    width: 24px;
+    height: 30px;	
+	border-radius: 50%;
+}
 .social .fa {
 	font-size: 28px;
 	color: #fff;
-	background-color: #d3d3d3;
-	border: 1px solid #d3d3d3;
-	border-radius: 50%;
-	padding: 15px;
 	margin: 10px;
 	-webkit-align-self: flex-end;
 	-ms-flex-item-align: flex-end;
-	align-self: flex-end;
+	align-self: flex-end;	
+	text-align: center;
 }
 .social .fa:first-child {
 		padding: 15px 20px;
