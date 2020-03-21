@@ -4,8 +4,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title></title>
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="owlcarousel/assets/owl.carousel.css">
-    <link rel="stylesheet" href="owlcarousel/assets/owl.theme.default.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="style.css">
 </head>
@@ -13,8 +11,8 @@
 <header>
 <div class="container">
 <div class="logo"><span class="red">S</span>mart</div>
-<button class="menuToggle"><span class="red">M</span>enu</button>
-<div class="menu">
+<button class="menuToggle" onclick="toggle()"><span class="red">M</span>enu</button>
+<div class="menu" id='menu'>
 <ul>
 <li><a href="#process">Working Process</a></li>
 <li><a href="#features">Featured Works</a></li>
@@ -31,7 +29,7 @@
 <input type="text" placeholder="Your Name" name="contact_name" id="contact_name" value="">
 <input type="text" placeholder="Your email" name="contact_email" id="contact_email" value="">
 <textarea placeholder="Your Message" name="contact_comments" id="commentsText" rows="5" cols="30" value=""></textarea>
-<div class="btn-align"><button class="form-btn" type="submit">Send Message  <i class="fa fa-arrow-right"></i></button></div>
+<button class="form-btn" type="submit"  onclick="sendFunc()">Send Message  <i class="fa fa-arrow-right"></i></button>
 <input type="hidden" name="submitted" id="submitted" value="true">
 </form>
 </div>
@@ -47,11 +45,11 @@
 <h2><i class="fa fa-paperclip"></i></h2>
 <h3>Koc Koi Tomi</h3>
 <p>Lorem ipsum is dummy lorem very dumy.</p>
-<div class="btn-align"><button class="more"><a href="#">+ Know More</a></button></div>
+<button class="more" onclick="toggle1()"><a href="#">+ Know More</a></button>
 </div>
-<div class="modal-window" id="first">
+<div class="modal-window" id="first" >
 <div class="container">
-<div class="close">✖</div>
+<div class="close" onclick="toggleClose()">✖</div>
 <div class="know">
 <h2>Koc Koi Tomi</h2>
 <p>Lorem ipsum is dummy lorem very dumy.</p>
@@ -63,11 +61,11 @@
 <h2><i class="fa fa-underline"></i></h2>
 <h3>Koimona Set</h3>
 <p>Lorem ipsum is dummy you   lorem very dumyL is.</p>
-<div class="btn-align"><button class="more"><a href="#">+ Know More</a></button></div>
+<button class="more"  onclick="toggle2()"><a href="#">+ Know More</a></button>
 </div>
 <div class="modal-window" id="second">
 <div class="container">
-<div class="close">✖</div>
+<div class="close" onclick="toggleClose()">✖</div>
 <div class="know">
 <h2>Koimona Set</h2>
 <p>Lorem ipsum is dummy lorem very dumy. Lorem ipsum is dummy you   lorem very dumyL is.</p>
@@ -80,11 +78,11 @@
 <h2><i class="fa fa-cogs"></i></h2>
 <h3>Setting Koire</h3>
 <p>Lorem ipsum is dummy lorem very yLorem ipsus.</p>
-<div class="btn-align"><button class="more"><a href="#">+ Know More</a></button></div>
+<button class="more" onclick="toggle3()"><a href="#">+ Know More</a></button>
 </div>
 <div class="modal-window" id="third">
 <div class="container">
-<div class="close">✖</div>
+<div class="close" onclick="toggleClose()">✖</div>
 <div class="know">
 <h2>Setting Koire</h2>
 <p>Lorem ipsum is dummy lorem very yLorem ipsus. Lorem ipsum is dummy lorem very dumy.</p>
@@ -95,11 +93,11 @@
 <h2><i class="fa fa-camera-retro"></i></h2>
 <h3>Ko Image Lara</h3>
 <p>Lorem ipsum is dummy ry dumy Lorem ipsum is.</p>
-<div class="btn-align"><button class="more"><a href="#">+ Know More</a></button></div>
+<button class="more" onclick="toggle4()"><a href="#">+ Know More</a></button>
 </div>
 <div class="modal-window" id="fourth">
 <div class="container">
-<div class="close">✖</div>
+<div class="close" onclick="toggleClose()">✖</div>
 <div class="know">
 <h2>Ko Image Lara</h2>
 <p>Lorem ipsum is dummy lorem very dumy. Lorem ipsum is dummy ry dumy Lorem ipsum is.</p>
@@ -138,7 +136,7 @@
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus earum totam ad sint error porro. Consectetur, sunt, aperiam. Magni rem optio distinctio illum consequuntur delectus nulla illo aperiam itaque cumque.</p>
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel officia vitae eveniet quam rem unde facilis.</p>
 <p>vitae eveniet quam rem unde facilis.</p>
-<button class="more"><a href="#">+ Know More</a></button>
+<button class="more" onclick="toggleDesign()"><a href="#">+ Know More</a></button>
 <div class="modal-window" id="design">
 <div class="container">
 <div class="close">✖</div>
@@ -188,24 +186,28 @@
 <h2><span class="red">Clients</span> said</h2>
 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit Maiores fuga provident Libero.</p>
 
-<div class="owl-carousel owl-theme owl-loaded">
-    <div class="owl-stage-outer">
-        <div class="owl-stage">
-            <div class="owl-item"><div class="aligner"><p>“This was my first time renting from car rental. The service rep help me find the best rental to suit my needs. I will definitely rent with this company again”</p><p>Kita Say, HK Director</p></div></div>
-            <div class="owl-item"><div class="aligner"><p>“This was my first time renting from car rental. The service rep help me find the best rental to suit my needs. I will definitely rent with this company again”</p><p>Dita Say, UX Director</p></div></div>
-            <div class="owl-item"><div class="aligner"><p>“This was my first time renting from car rental. The service rep help me find the best rental to suit my needs. I will definitely rent with this company again”</p><p>Nita Say, HK Director</p></div></div>
-            <div class="owl-item"><div class="aligner"><p>“This was my first time renting from car rental. The service rep help me find the best rental to suit my needs. I will definitely rent with this company again”</p><p>Anita Say, HK Director</p></div></div>
-            <div class="owl-item"><div class="aligner"><p>“This was my first time renting from car rental. The service rep help me find the best rental to suit my needs. I will definitely rent with this company again”</p><p>Al Rayhan, UX Director</p></div></div>
-            <div class="owl-item"><div class="aligner"><p>“This was my first time renting from car rental. The service rep help me find the best rental to suit my needs. I will definitely rent with this company again”</p><p>Alina Rayhan, UX Director</p></div></div>    
+
+    <div id="carousel" class="carousel">
+	    <button class="arrow prev"><i class="fa fa-angle-left"></i></button>
+        <div class="gallery">
+		<div class="my-carousel">
+            <div class="carousel-item"><div class="aligner"><p>“This was my first time renting from car rental. The service rep help me find the best rental to suit my needs. I will definitely rent with this company again”</p><p>Kita Say, HK Director</p></div></div>
+            <div class="carousel-item"><div class="aligner"><p>“This was my first time renting from car rental. The service rep help me find the best rental to suit my needs. I will definitely rent with this company again”</p><p>Dita Say, UX Director</p></div></div>
+            <div class="carousel-item"><div class="aligner"><p>“This was my first time renting from car rental. The service rep help me find the best rental to suit my needs. I will definitely rent with this company again”</p><p>Nita Say, HK Director</p></div></div>
+            <div class="carousel-item"><div class="aligner"><p>“This was my first time renting from car rental. The service rep help me find the best rental to suit my needs. I will definitely rent with this company again”</p><p>Anita Say, HK Director</p></div></div>
+            <div class="carousel-item"><div class="aligner"><p>“This was my first time renting from car rental. The service rep help me find the best rental to suit my needs. I will definitely rent with this company again”</p><p>Al Rayhan, UX Director</p></div></div>
+            <div class="carousel-item"><div class="aligner"><p>“This was my first time renting from car rental. The service rep help me find the best rental to suit my needs. I will definitely rent with this company again”</p><p>Alina Rayhan, UX Director</p></div></div>    
         </div>
+		  </div>
+		    <button class="arrow next"><i class="fa fa-angle-right"></i></button>
     </div>
-</div>
+
+  </div>
     </div>
-</div>
 </main>
 <footer>
 <div class="container">
-<div class="btn-align"><a href="#feedback-form"><button class="more">Contact Us</button></a></div>
+<button class="more"><a href="#feedback-form">Contact Us</a></button>
 
 <div class="social">
 <p class="col-1">
@@ -219,8 +221,6 @@
 </div>
 
 </footer>
-<script src="js/jquery.min.js"></script>
-<script src="owlcarousel/owl.carousel.js"></script>
 <script src="js/mainjs.js"></script>
 </body>
 </html>

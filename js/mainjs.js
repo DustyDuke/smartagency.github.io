@@ -1,56 +1,66 @@
-$('.menuToggle').click(function() {
-	$('.menu').toggle(400);
-});
-$('.form-btn').click(function() {
-	$('.fa-arrow-right').css({'transform': 'translateX(50px)', 'transition':'1s'});
-});
+function sendFunc() {
+	let arrowFade = document.querySelector('.fa-arrow-right');	
+	arrowFade.classList.add('arrowAnimate');
 
-$('.owl-carousel').owlCarousel({
-    loop:true,
-    margin:10,
-    nav:true,
-	dots:true,
-	autoplay: false,
-    responsive:{
-        0:{
-            items:1
-        },
-        600:{
-            items:1
-        },
-        1000:{
-            items:2
-        }
-    }
-});
-$('.first .more').click(function() {
-$('#first').css({'display': 'block'})
-});
+}
+function toggle() {
+   let menu = document.getElementById("menu");
+   let ul = document.querySelector('ul');
+   function hide(){menu.style.display = 'none'};
+  (menu.style.display == 'none' || menu.style.display ==  '' ) ? (menu.style.display = 'block', ul.style.animationName = 'appear') : (ul.style.animationName = 'disappear', setTimeout(hide, 2000));
+  ul.style.animationDuration = '2s';
 
-$('.second .more').click(function() {
-$('#second').css({'display': 'block'})
-});
+}
+function toggle1() {
+   let first = document.getElementById("first");
+    first.style.display = 'block';
+}
+function toggle2() {
+   let second = document.getElementById("second");
+    second.style.display = 'block';
+}
+function toggle3() {
+   let third = document.getElementById("third");
+    third.style.display = 'block';
+}
+function toggle4() {
+   let fourth = document.getElementById("fourth");
+    fourth.style.display = 'block';
+}
+function toggleDesign() {
+   let design = document.getElementById("design");
+    design.style.display = 'block';
+}
+function toggleClose() {
+	let mw = document.querySelectorAll('.modal-window');
+      mw.forEach(el =>  el.style.display = 'none')
+}
 
-$('.third .more').click(function() {
-$('#third').css({'display': 'block'})
-});
+   /* Карусель */
 
-$('.fourth .more').click(function() {
-$('#fourth').css({'display': 'block'})
-});
-$('.design .more').click(function() {
-$('#design').css({'display': 'block'})
-});
-$('.close').click(function() {
-$('.modal-window').css({'display': 'none'})
-});
+    let list = carousel.querySelector('.my-carousel');
+    let listElems = carousel.querySelectorAll('.carousel-item');
+	let width = listElems[0].offsetWidth + 3;
+    let position = 0; 
+
+    carousel.querySelector('.prev').onclick = function() {
+      // сдвиг влево
+      position += width;
+      position = Math.min(position, 0)
+      list.style.marginLeft = position + 'px';
+    };
+
+    carousel.querySelector('.next').onclick = function() {
+      // сдвиг вправо
+      position -= width;
+	  console.log(listElems[0].offsetWidth + 5);
+      position = Math.max(position, -width * (listElems.length));
+      list.style.marginLeft = position + 'px';
+    };
 
 
-var items = $('.job');
-items.css('opacity', 0);
-for (var i = 0; i < items.length; i++) {
-  $(items[i]).delay(i * 400).animate({ opacity: 1 }, 400);
-};
+
+
 
 
 /*
