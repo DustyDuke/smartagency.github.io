@@ -29,7 +29,7 @@ const toHTMLprocess = process => `
 <h2><i class="fa ${process.icon}"></i></h2>
 <h3>${process.title}</h3>
 <p>${process.preContent}</p>
-<button class="more" data-btn='more' data-id='${process.id}'>+ Know More</button>
+<button class="more" data-btn='more' onClick=knowMore() data-id='${process.id}'>+ Know More</button>
 </div>`
 
 let design = {id: 'design', title: 'Modern App Design', content: `
@@ -103,8 +103,10 @@ function render() {
 render()
 
 //Modal plugin
-
-const modal = $.modal({})
+let modal 
+function knowMore() {
+	 modal = $.modal({})
+} 
 
 // Carousel
 

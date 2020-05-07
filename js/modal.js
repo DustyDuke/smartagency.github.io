@@ -40,22 +40,24 @@ $.modal = function(options){
 			$modal.classList.remove('hide')
 			closing = false
 			}, ANMATION_SPEED )
-		}		
+		},
+		destroy() {
+			$modal.parentNode.removeChild($modal)
+			$modal.removeEventListener('click', listener)
+			destroyed = true
+			}
 	}	
 	const listener = event => {
 		if(event.target.dataset.close){
 			modal.close()
+			setTimeout(() => modal.destroy(), 1000)
 		}
 	}
 	
 	$modal.addEventListener('click', listener)
 	
 	return Object.assign(modal, {
-		destroy() {
-			$modal.parentNode.removeChild($modal)
-			$modal.removeEventListener('click', listener)
-			destroyed = true
-			},
+		
 			setTitle(html){
 			$modal.querySelector('[data-title]').innerHTML = html
 		},
@@ -66,7 +68,6 @@ $.modal = function(options){
 }
 
 document.addEventListener('click', event => {
-//	event.preventDefault()
 	const btnType = event.target.dataset.btn
 	const id = +event.target.dataset.id
 	const process = processes.find(p => p.id === id)
@@ -86,7 +87,7 @@ document.addEventListener('click', event => {
 		modal.setContent(`
 		<p>${process.content}</p>
 		`)}
-		modal.open()
+		setTimeout(() => modal.open(), 200)
 	}
 	
 })
