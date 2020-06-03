@@ -73,14 +73,7 @@ document.addEventListener('click', event => {
 	const process = processes.find(p => p.id === id)
 	
 	if(btnType === 'more') {
-		if(design.id === 'design') {
-			modal.setTitle(`
-		<h3>${design.title}</h3>
-		`),
-		modal.setContent(`
-		<p>${design.content}</p>
-		`)
-		} else {
+		if(process.id === id){
 		modal.setTitle(`
 		<h3>${process.title}</h3>
 		`),
@@ -88,6 +81,6 @@ document.addEventListener('click', event => {
 		<p>${process.content}</p>
 		`)}
 		setTimeout(() => modal.open(), 200)
-	}
+	
 	
 })
