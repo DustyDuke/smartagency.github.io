@@ -75,7 +75,11 @@ document.addEventListener('click', event => {
 
 	//console.log(design)
 	
+<<<<<<< HEAD
 if(process && btnType === 'more') {
+=======
+	if(btnType === 'more') {
+>>>>>>> a38f6f11940cfebd91f8fc33f389724e24cb07b5
 		 if(process.id === id){
 		modal.setTitle(`
 		<h3>${process.title}</h3>
@@ -85,6 +89,7 @@ if(process && btnType === 'more') {
 		`)} 
 		setTimeout(() => modal.open(), 200)
 	
+<<<<<<< HEAD
 	} else if (design && btnType === 'more'){
 		modal.setTitle(`
 		<h3>${design.title}</h3>
@@ -96,3 +101,6 @@ if(process && btnType === 'more') {
 	}
 })
 
+=======
+})
+>>>>>>> a38f6f11940cfebd91f8fc33f389724e24cb07b5
