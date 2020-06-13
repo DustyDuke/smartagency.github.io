@@ -71,23 +71,28 @@ document.addEventListener('click', event => {
 	const btnType = event.target.dataset.btn
 	const id = +event.target.dataset.id
 	const process = processes.find(p => p.id === id)
+
+
+	//console.log(design)
 	
-	if(btnType === 'more') {
-		if(design.id === 'design') {
-			modal.setTitle(`
-		<h3>${design.title}</h3>
-		`),
-		modal.setContent(`
-		<p>${design.content}</p>
-		`)
-		} else {
+if(process && btnType === 'more') {
+		 if(process.id === id){
 		modal.setTitle(`
 		<h3>${process.title}</h3>
 		`),
 		modal.setContent(`
 		<p>${process.content}</p>
-		`)}
+		`)} 
+		setTimeout(() => modal.open(), 200)
+	
+	} else if (design && btnType === 'more'){
+		modal.setTitle(`
+		<h3>${design.title}</h3>
+		`),
+		modal.setContent(`
+		<p>${design.content}</p>
+		`)
 		setTimeout(() => modal.open(), 200)
 	}
-	
 })
+
